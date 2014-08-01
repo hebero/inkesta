@@ -1,0 +1,123 @@
+<?php
+session_start();
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-16">
+	<link rel="stylesheet" href="css/inkesta.css" type="text/css">
+	<link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+	<link rel="icon" href="/favicon.png" type="image/png">
+	<!--<link rel="stylesheet" href="css/bootstrap-theme.css" type="text/css">-->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>Inkesta</title>
+	
+	<!--[if lt IE 9]>
+    	<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body role ="document">
+<div class="container-fluid">
+	<div class="row">
+	<div class="col-md-12">
+		<div class="navbar navbar-default" role="navigation">
+		<div class="container">
+			<div class="navbar-header">
+				    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+    				</button>
+				<a class="navbar-brand" href="#"><span class="glyphicon glyphicon-home"></span> Inkesta</a>
+			</div>
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+     			<ul class="nav navbar-nav">
+					<li class="active"><a href="#">Inicio</a></li>
+					<li> <a href="#"></a></li>
+        		</ul>
+        	</div>
+        </div>
+		</div>
+		<div class="container">
+		<div class="jumbotron" id="jumbotron1">
+			<div id ="well-group1" style="position:relative !important;">
+				<div class="well"><h2><a href="#" id="well1">Crear Encuesta &rarr;</a></h2></div>
+				<div class="well"><h2><a href="#" id="well2">Tus Encuestas &rarr;</a></h2></div>
+				<div class="well"><h2><a href="#" id="well3">Archivos &rarr;</a></h2></div>
+			</div>
+			<div id ="well-group2" style="display:none;">
+				<div class="well"><h2><a href="#" id="crenc">Crear Encabezado &rarr;</a></h2></div>
+				<div class="well"><h2><a href="#">Crear Grupo &rarr;</a></h2></div>
+				<div class="well"><h2><a href="#">Nombre de ... &rarr;</a></h2></div>
+			</div>
+				<form class="form-horizontal" role="form" action="proces.php" method="post" accept-charset="utf-8" style="display:none;" id="form-enc">
+					<div class="form-group">
+						<label for="encuestador">Número de grupo:</label>
+						<div class="input-group input-group-lg">
+						 <span class="input-group-addon">#</span>
+							<input type="text" class="form-control" id="encuestador" name="encuestador" placeholder="Grupo">
+						</div>
+					</div>	
+					<div class="form-group">
+						<button type="submit" class="btn btn-default">Entrar</button>
+					</div>				
+				</form>
+		</div>
+		</div>
+		<div class="panel panel-default" id="panel1" style="display:none;">
+			<div class="panel-heading">
+				<h3 class="panel-title">Encuesta Fase 1</h3>
+			</div>
+			<div class="panel-body">
+				<table class="table">
+					<thead>
+						<tr>
+							<th>Campo</th>
+							<th>Requisitos</th>
+						</tr>
+					</theadd>
+					<tbody>
+						<tr>
+							<td>Nombre de la encuesta</td>
+							<td><div class="form-group"> <input class="form-control" type="text" placeholder="Nombre de la encuesta"> </div></td>
+						</tr>
+						<tr>
+							<td>Número de Encuestadores</td>
+							<td>
+								<select class="form-control">
+									<option>1</option>
+									<option>2</option>
+									<option>3</option>
+									<option>4</option>
+									<option>5</option>
+									<option>6</option>
+									<option>7</option>
+									<option>8</option>
+									<option>9</option>
+									<option>10</option>
+								</select>
+							</td>
+						</tr>
+						<td><button id="btn11" type="button" class="btn btn-success btn-lg">Guardar</button></td>
+					</tbody>
+
+				</table>
+			</div>
+		</div>
+	</div>
+	</div>
+	</div>
+	<footer class="bs-footer" role="contentinfo">
+		<div class="container">
+			<p>Inkesta</p>
+			<p></p>
+		</div>	
+	</footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="js/bootstrap.js" type="text/javascript"></script>
+<script type="text/javascript" src="js/ikscript.js"></script>
+</body>
+</html>

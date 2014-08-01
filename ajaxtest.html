@@ -1,0 +1,80 @@
+<html>
+<head>
+<title>AJAX Example</title>
+<script type="text/javascript" src ="xhr.js"></script>
+</head>
+<body>
+<h1>LOADING A WEBPAGE INTO A DIV</h1>
+
+<div id="info">This is going to be replaced </div>
+
+<script type="text/javascript">
+url = "ajaxtest.php";
+params = "url="+encodeURIComponent("oreilly.com");
+
+request = new ajaxRequest();
+request.open("POST",url,true);
+request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+
+request.onreadystatechange = function() {
+    if(this.readyState == 4) {
+        if(this.status == 200) {
+            if(this.responseText != null) {
+                document.getElementById('info').innerHTML = this.responseText;
+            } else {
+                alert("Ajax error: No data received ")
+            }
+        } else {
+            alert("Ajax Error " + this.statusText)
+        }
+    }
+}
+
+request.send(params);
+</script>
+</body>
+</html>
+<!-- <html>
+<head>
+	<title>ajax</title>
+</head>
+<body>
+<h1>Loading a web page into a DIV</h1>
+<div id="info">This sentence will be replaced
+</div>
+<script>
+params ="url-oreilly.com";
+request = new ajaxRequest();
+request.open("POST", "ajaxtest.php", true);
+request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+request.setRequestHeader("Content-lenght", params.lenght);
+request.setRequestHeader("Conecction", "close");
+request.onreadystatechange=function  () {
+	if (this.readyState==4) 
+	{
+		if(this.status=200){
+			if (this.responseText != null) {
+				document.getElementById('info').innerHTML = this.responseText;
+			}
+			else {
+				alert("Ajax error: no data received");
+			}
+		else{alert("Ajax error" + this.statusText)}
+		}
+	}
+	}
+request.send(params);
+function ajaxRequest () {
+	try{
+		var request = XMLHttpRequest();
+	}
+	catch(e1){
+		try{
+			request = Active
+		}
+	}
+}
+
+</script>
+</body>
+</html> -->
